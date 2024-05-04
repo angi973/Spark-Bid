@@ -1,0 +1,116 @@
+.subscribed-page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+}
+
+.subscribed-page-container .my-listings-content {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 10px;
+  max-width: var(--desktop-width);
+  width: 100%;
+  margin: auto;
+}
+
+.subscribed-page-container .subscribed-user-listings {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.subscribed-page-container .my-listings-content h2 {
+  margin: 0px;
+}
+
+.subscribed-page-container .my-listings-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.subscribed-page-container .my-listings {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.subscribed-page-container .my-listing .listing-card {
+  background-color: var(--base-200);
+  border-radius: 16px;
+  display: flex;
+  flex-basis: calc(50% - 20px);
+  flex-grow: 1;
+}
+
+.subscribed-page-container .my-listing .listing-details {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 5px;
+  padding: 10px;
+}
+
+.subscribed-page-container .my-listing h3 {
+  margin: 5px;
+}
+
+.subscribed-page-container .my-listing p {
+  flex-grow: 1;
+  margin: 3px;
+}
+
+.subscribed-page-container .my-listing img {
+  max-width: 256px;
+  height: 196px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.subscribed-page-container .my-listing .stats {
+  display: flex;
+  justify-content: space-between;
+  color: var(--success);
+}
+
+.subscribed-page-container .my-listing .actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 5px;
+}
+
+.subscribed-page-container .item {
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px;
+  text-align: left;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.18);
+}
+
+@media screen and (max-width: 800px) {
+  .my-listings,
+  .my-listing,
+  .listing-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-basis: calc(80% - 20px);
+    flex-grow: 1;
+  }
+
+  .my-listings {
+    width: 90vw;
+  }
+
+  .my-listings-content {
+    width: 90vw;
+    padding: 5vw;
+  }
+}

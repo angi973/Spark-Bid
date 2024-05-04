@@ -1,0 +1,98 @@
+.listing-card {
+  display: flex;
+  position: relative;
+  /* flex-direction: column; */
+  gap: 5px;
+  background-color: var(--base-200);
+  border-radius: 16px;
+  flex-basis: calc(50% - 20px);
+  flex-grow: 1;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.listing-card img {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 512px;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+  margin: 0px;
+  padding: 10px;
+}
+
+.listing-card .listing-card-body {
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 5px;
+  max-width: 60%;
+  margin-left: auto;
+}
+
+.listing-card .listing-card-body h3 {
+  width: 100%;
+  margin: 5px 0px;
+}
+
+.listing-card .listing-card-body p {
+  margin: 0px;
+  width: 100%;
+  font-size: 0.8em;
+}
+
+.listing-card .listing-card-body .listing-card-detail {
+  flex-basis: calc(50% - 20px);
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+}
+
+.listing-card .listing-card-body .listing-card-green {
+  color: var(--success);
+}
+
+.listing-card .listing-card-body .listing-card-red {
+  color: var(--error);
+}
+
+.listing-card .sold-overlay {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background-color: var(--base-300);
+  font-size: 4em;
+  opacity: 0.75;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.listing-card .actions {
+  width: 100%;
+  display: flex;
+}
+
+.listing-card .sold-overlay .overlay-text {
+  transform-origin: center;
+  transform: rotate(-45deg);
+}
+
+@media screen and (max-width: 800px) {
+  .listing-card img {
+    padding: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+
+  .listing-card .listing-card-body {
+    display: block;
+    margin: 0px;
+    max-width: 100%;
+  }
+}
